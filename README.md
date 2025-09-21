@@ -1,2 +1,532 @@
 # Sarvaksh_Shukla.github.io
 My portfolio website
+[index.html](https://github.com/user-attachments/files/22452650/index.html)
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .dark .glassmorphism {
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        /* Custom scrollbar for webkit browsers */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        .dark ::-webkit-scrollbar-track {
+            background: #1a202c;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        .dark ::-webkit-scrollbar-thumb {
+            background: #555;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        .dark ::-webkit-scrollbar-thumb:hover {
+            background: #333;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 transition-colors duration-500">
+
+    <!-- Header & Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 glassmorphism">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-bold">Your Name</a>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#home" class="hover:text-indigo-400">Home</a>
+                <a href="#about" class="hover:text-indigo-400">About</a>
+                <a href="#projects" class="hover:text-indigo-400">Projects</a>
+                <a href="#resume" class="hover:text-indigo-400">Resume</a>
+                <a href="#contact" class="hover:text-indigo-400">Contact</a>
+            </div>
+             <div class="flex items-center space-x-4">
+                <button id="theme-toggle" class="p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    <i data-lucide="sun" class="block dark:hidden"></i>
+                    <i data-lucide="moon" class="hidden dark:block"></i>
+                </button>
+                <button id="admin-login-btn" class="px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Admin</button>
+                <button id="admin-logout-btn" class="hidden px-4 py-2 text-sm font-medium text-white bg-red-600 rounded-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500">Logout</button>
+                <button id="mobile-menu-btn" class="md:hidden p-2 rounded-md">
+                     <i data-lucide="menu"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#home" class="block py-2 hover:text-indigo-400">Home</a>
+            <a href="#about" class="block py-2 hover:text-indigo-400">About</a>
+            <a href="#projects" class="block py-2 hover:text-indigo-400">Projects</a>
+            <a href="#resume" class="block py-2 hover:text-indigo-400">Resume</a>
+            <a href="#contact" class="block py-2 hover:text-indigo-400">Contact</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 pt-24">
+        <!-- Home Section -->
+        <section id="home" class="section text-center">
+            <div class="max-w-4xl mx-auto">
+                <img src="https://placehold.co/150x150/E2E8F0/4A5568?text=You" alt="Your Name" class="w-40 h-40 rounded-full mx-auto mb-8 border-4 border-indigo-400 shadow-lg">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm <span id="home-name" class="text-indigo-400">Your Name</span></h1>
+                <p id="home-title" class="text-xl md:text-2xl text-gray-600 dark:text-gray-400 mb-8">A Passionate Web Developer</p>
+                <p id="home-bio" class="max-w-2xl mx-auto mb-8">I specialize in creating modern, responsive, and user-friendly web applications. Let's build something amazing together.</p>
+                <a href="#projects" class="inline-block bg-indigo-600 text-white px-8 py-3 rounded-md font-semibold hover:bg-indigo-700 transition-transform transform hover:scale-105">View My Work</a>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="section">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div class="order-2 md:order-1">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">About Me</h2>
+                    <p id="about-text" class="mb-4 text-gray-600 dark:text-gray-400">
+                        Hello! I'm a dedicated and results-driven web developer with a knack for crafting beautiful and functional websites. With a strong foundation in front-end and back-end technologies, I enjoy turning complex problems into simple, elegant solutions. My journey in web development started with a fascination for how things work on the internet, and it has grown into a full-fledged passion.
+                        <br><br>
+                        When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying a good cup of coffee. I am a lifelong learner and am always excited to take on new challenges.
+                    </p>
+                    <button id="edit-about-btn" class="admin-feature hidden mt-4 px-4 py-2 text-sm font-medium text-white bg-green-600 rounded-md hover:bg-green-700">Edit About Info</button>
+                </div>
+                <div class="order-1 md:order-2">
+                    <img src="https://placehold.co/600x400/312E81/FFFFFF?text=Coding" alt="About me image" class="rounded-lg shadow-2xl w-full h-auto">
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section pt-20 pb-20">
+            <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">My Projects</h2>
+            <div id="projects-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project items will be injected here by JavaScript -->
+            </div>
+            <div class="text-center mt-12">
+                <button id="add-project-btn" class="admin-feature hidden inline-block bg-green-600 text-white px-8 py-3 rounded-md font-semibold hover:bg-green-700">Add New Project</button>
+            </div>
+        </section>
+
+        <!-- Resume Section -->
+        <section id="resume" class="section text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">My Resume</h2>
+            <p class="max-w-2xl mx-auto mb-8 text-gray-600 dark:text-gray-400">
+                Here you can download a copy of my resume. It contains a more detailed look at my skills, experience, and education.
+            </p>
+            <div>
+                <a id="download-resume-btn" href="#" download="resume.pdf" class="inline-block bg-indigo-600 text-white px-8 py-3 rounded-md font-semibold hover:bg-indigo-700 transition-transform transform hover:scale-105">
+                    <i data-lucide="download" class="inline-block mr-2"></i>Download Resume
+                </a>
+                <div class="admin-feature hidden mt-6">
+                    <label for="resume-upload" class="cursor-pointer inline-block bg-green-600 text-white px-8 py-3 rounded-md font-semibold hover:bg-green-700">
+                        <i data-lucide="upload" class="inline-block mr-2"></i>Upload New Resume
+                    </label>
+                    <input type="file" id="resume-upload" class="hidden" accept=".pdf">
+                    <p id="upload-status" class="text-sm mt-2 text-gray-500"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="max-w-2xl mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Get In Touch</h2>
+                <p class="mb-8 text-gray-600 dark:text-gray-400">I'm currently open to new opportunities. If you have a project in mind or just want to say hi, feel free to reach out!</p>
+                <p class="text-lg font-semibold mb-2">sarvakshukla@gmail.com</p>
+                <div class="flex justify-center space-x-6 mt-4">
+                    <a href="#" class="text-gray-500 hover:text-indigo-400"><i data-lucide="github" class="w-8 h-8"></i></a>
+                    <a href="#" class="text-gray-500 hover:text-indigo-400"><i data-lucide="linkedin" class="w-8 h-8"></i></a>
+                    <a href="#" class="text-gray-500 hover:text-indigo-400"><i data-lucide="twitter" class="w-8 h-8"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="bg-gray-200 dark:bg-gray-800 py-6 mt-16">
+        <div class="container mx-auto px-6 text-center text-gray-600 dark:text-gray-400">
+            <p>&copy; 2025 Sarvaksh Shukla. All Rights Reserved.</p>
+        </div>
+    </footer>
+    
+    <!-- Modals -->
+    <!-- Admin Login Modal -->
+    <div id="login-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center p-4">
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-xl p-8 max-w-sm w-full">
+            <h3 class="text-2xl font-bold mb-6 text-center">Admin Login</h3>
+            <input type="password" id="password-input" placeholder="Enter password" class="w-full px-4 py-2 border rounded-md dark:bg-gray-700 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            <p id="login-error" class="text-red-500 text-sm mt-2"></p>
+            <div class="flex justify-end space-x-4 mt-6">
+                <button id="login-cancel" class="px-4 py-2 rounded-md text-gray-700 dark:text-gray-300 bg-gray-200 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-gray-500">Cancel</button>
+                <button id="login-submit" class="px-4 py-2 rounded-md text-white bg-indigo-600 hover:bg-indigo-700">Login</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Modal -->
+    <div id="project-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center p-4">
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-xl p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+            <h3 id="project-modal-title" class="text-2xl font-bold mb-6">Add Project</h3>
+            <form id="project-form">
+                <input type="hidden" id="project-id">
+                <div class="mb-4">
+                    <label for="project-title" class="block mb-2">Title</label>
+                    <input type="text" id="project-title" class="w-full px-4 py-2 border rounded-md dark:bg-gray-700 dark:border-gray-600" required>
+                </div>
+                <div class="mb-4">
+                    <label for="project-image" class="block mb-2">Image URL</label>
+                    <input type="text" id="project-image" class="w-full px-4 py-2 border rounded-md dark:bg-gray-700 dark:border-gray-600" placeholder="https://placehold.co/...">
+                </div>
+                <div class="mb-4">
+                    <label for="project-description" class="block mb-2">Description</label>
+                    <textarea id="project-description" rows="4" class="w-full px-4 py-2 border rounded-md dark:bg-gray-700 dark:border-gray-600" required></textarea>
+                </div>
+                <div class="mb-4">
+                    <label for="project-tech" class="block mb-2">Technologies (comma separated)</label>
+                    <input type="text" id="project-tech" class="w-full px-4 py-2 border rounded-md dark:bg-gray-700 dark:border-gray-600" required>
+                </div>
+                <div class="mb-4">
+                    <label for="project-link" class="block mb-2">Live Link (optional)</label>
+                    <input type="url" id="project-link" class="w-full px-4 py-2 border rounded-md dark:bg-gray-700 dark:border-gray-600">
+                </div>
+                 <div class="mb-4">
+                    <label for="project-repo" class="block mb-2">Repo Link (optional)</label>
+                    <input type="url" id="project-repo" class="w-full px-4 py-2 border rounded-md dark:bg-gray-700 dark:border-gray-600">
+                </div>
+                <div class="flex justify-end space-x-4 mt-6">
+                    <button type="button" id="project-cancel" class="px-4 py-2 rounded-md text-gray-700 dark:text-gray-300 bg-gray-200 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-gray-500">Cancel</button>
+                    <button type="submit" class="px-4 py-2 rounded-md text-white bg-indigo-600 hover:bg-indigo-700">Save Project</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!-- About Modal -->
+    <div id="about-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden items-center justify-center p-4">
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-xl p-8 max-w-2xl w-full">
+            <h3 class="text-2xl font-bold mb-6">Edit Info</h3>
+            <form id="about-form">
+                <div class="mb-4">
+                    <label for="about-name" class="block mb-2">Your Name</label>
+                    <input type="text" id="about-name" class="w-full px-4 py-2 border rounded-md dark:bg-gray-700 dark:border-gray-600" required>
+                </div>
+                <div class="mb-4">
+                    <label for="about-title" class="block mb-2">Your Title/Headline</label>
+                    <input type="text" id="about-title" class="w-full px-4 py-2 border rounded-md dark:bg-gray-700 dark:border-gray-600" required>
+                </div>
+                <div class="mb-4">
+                    <label for="about-bio" class="block mb-2">Short Bio (for Home screen)</label>
+                    <textarea id="about-bio" rows="3" class="w-full px-4 py-2 border rounded-md dark:bg-gray-700 dark:border-gray-600" required></textarea>
+                </div>
+                 <div class="mb-4">
+                    <label for="about-full" class="block mb-2">Full About Me Text</label>
+                    <textarea id="about-full" rows="6" class="w-full px-4 py-2 border rounded-md dark:bg-gray-700 dark:border-gray-600" required></textarea>
+                </div>
+                <div class="flex justify-end space-x-4 mt-6">
+                    <button type="button" id="about-cancel" class="px-4 py-2 rounded-md text-gray-700 dark:text-gray-300 bg-gray-200 dark:bg-gray-600 hover:bg-gray-300 dark:hover:bg-gray-500">Cancel</button>
+                    <button type="submit" class="px-4 py-2 rounded-md text-white bg-indigo-600 hover:bg-indigo-700">Save Info</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+            
+            // --- CONFIGURATION ---
+            // IMPORTANT: Change this password!
+            const ADMIN_PASSWORD = 'SarvakShukla@123'; 
+
+            // --- STATE MANAGEMENT ---
+            let state = {
+                isAdmin: false,
+                about: {
+                    name: 'Sarvaksh Shukla',
+                    title: 'BITS Pilani',
+                    bio: "I specialize in creating modern, responsive, and user-friendly web applications. Let's build something amazing together.",
+                    fullText: `Hello! I'm a dedicated and results-driven web developer with a knack for crafting beautiful and functional websites. With a strong foundation in front-end and back-end technologies, I enjoy turning complex problems into simple, elegant solutions. My journey in web development started with a fascination for how things work on the internet, and it has grown into a full-fledged passion.\n\nWhen I'm not coding, you can find me exploring new technologies, contributing to open-source projects, or enjoying a good cup of coffee. I am a lifelong learner and am always excited to take on new challenges.`
+                },
+                projects: [
+                    { id: 1, title: 'Portfolio Website', image: 'https://placehold.co/600x400/312E81/FFFFFF?text=Project+1', description: 'A personal portfolio website to showcase my skills and projects. Built with modern technologies and a clean UI.', tech: ['HTML', 'Tailwind CSS', 'JavaScript'], link: '#', repo: '#' },
+                    { id: 2, title: 'E-commerce Platform', image: 'https://placehold.co/600x400/1D4ED8/FFFFFF?text=Project+2', description: 'A full-featured e-commerce site with product listings, a shopping cart, and a checkout process.', tech: ['React', 'Node.js', 'MongoDB'], link: '#', repo: '#' },
+                    { id: 3, title: 'Task Management App', image: 'https://placehold.co/600x400/16A34A/FFFFFF?text=Project+3', description: 'A productivity app to help users manage their tasks, set deadlines, and track progress.', tech: ['Vue.js', 'Firebase'], link: '#', repo: '#' },
+                ],
+                resumeUrl: null, // This will hold the Object URL for the uploaded PDF
+            };
+
+            // --- LOCAL STORAGE ---
+            function saveData() {
+                localStorage.setItem('portfolioData', JSON.stringify({ about: state.about, projects: state.projects }));
+                 if(state.resumeUrl) {
+                    // Can't save Blob URLs directly, so we just know it exists.
+                    // A real app would store the file in a backend.
+                 }
+            }
+            
+            function loadData() {
+                const savedData = localStorage.getItem('portfolioData');
+                if (savedData) {
+                    const parsedData = JSON.parse(savedData);
+                    state.about = parsedData.about;
+                    state.projects = parsedData.projects;
+                }
+            }
+
+            // --- UI RENDERING ---
+            function renderProjects() {
+                const grid = document.getElementById('projects-grid');
+                grid.innerHTML = '';
+                state.projects.forEach(p => {
+                    const projectCard = `
+                        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden group">
+                            <img src="${p.image}" alt="${p.title}" class="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300">
+                            <div class="p-6 relative">
+                                <h3 class="text-xl font-bold mb-2">${p.title}</h3>
+                                <p class="text-gray-600 dark:text-gray-400 mb-4">${p.description}</p>
+                                <div class="flex flex-wrap gap-2 mb-4">
+                                    ${p.tech.map(t => `<span class="bg-indigo-100 dark:bg-indigo-900 text-indigo-800 dark:text-indigo-300 text-xs font-medium px-2.5 py-0.5 rounded-full">${t}</span>`).join('')}
+                                </div>
+                                <div class="flex items-center space-x-4 mt-4">
+                                    ${p.link ? `<a href="${p.link}" target="_blank" class="text-indigo-500 hover:underline">Live Demo</a>` : ''}
+                                    ${p.repo ? `<a href="${p.repo}" target="_blank" class="text-indigo-500 hover:underline">GitHub</a>` : ''}
+                                </div>
+                                <div class="admin-feature hidden absolute top-4 right-4 flex space-x-2">
+                                    <button class="edit-project-btn p-2 bg-yellow-500 text-white rounded-full hover:bg-yellow-600" data-id="${p.id}"><i data-lucide="pencil" class="w-4 h-4"></i></button>
+                                    <button class="delete-project-btn p-2 bg-red-500 text-white rounded-full hover:bg-red-600" data-id="${p.id}"><i data-lucide="trash-2" class="w-4 h-4"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    `;
+                    grid.innerHTML += projectCard;
+                });
+                lucide.createIcons();
+                addProjectEventListeners();
+                updateAdminView();
+            }
+
+            function renderAbout() {
+                document.getElementById('home-name').textContent = state.about.name;
+                document.querySelector('title').textContent = `${state.about.name} - Portfolio`;
+                document.querySelector('a[href="#home"].text-2xl').textContent = state.about.name;
+                document.querySelector('footer p').textContent = `© 2024 ${state.about.name}. All Rights Reserved.`;
+                document.getElementById('home-title').textContent = state.about.title;
+                document.getElementById('home-bio').textContent = state.about.bio;
+                document.getElementById('about-text').innerHTML = state.about.fullText.replace(/\n/g, '<br>');
+            }
+
+            // --- ADMIN FUNCTIONALITY ---
+            function updateAdminView() {
+                const adminFeatures = document.querySelectorAll('.admin-feature');
+                if (state.isAdmin) {
+                    adminFeatures.forEach(el => el.classList.remove('hidden'));
+                    document.getElementById('admin-login-btn').classList.add('hidden');
+                    document.getElementById('admin-logout-btn').classList.remove('hidden');
+                } else {
+                    adminFeatures.forEach(el => el.classList.add('hidden'));
+                    document.getElementById('admin-login-btn').classList.remove('hidden');
+                    document.getElementById('admin-logout-btn').classList.add('hidden');
+                }
+            }
+
+            function login() {
+                const password = document.getElementById('password-input').value;
+                const errorEl = document.getElementById('login-error');
+                if (password === ADMIN_PASSWORD) {
+                    state.isAdmin = true;
+                    errorEl.textContent = '';
+                    closeModal('login-modal');
+                    updateAdminView();
+                } else {
+                    errorEl.textContent = 'Incorrect password.';
+                }
+            }
+            
+            function logout() {
+                state.isAdmin = false;
+                updateAdminView();
+            }
+
+            // --- MODALS ---
+            function openModal(id) {
+                document.getElementById(id).classList.remove('hidden');
+                document.getElementById(id).classList.add('flex');
+            }
+
+            function closeModal(id) {
+                document.getElementById(id).classList.add('hidden');
+                document.getElementById(id).classList.remove('flex');
+            }
+
+            // --- EVENT LISTENERS ---
+            // Theme toggle
+            const themeToggle = document.getElementById('theme-toggle');
+            themeToggle.addEventListener('click', () => {
+                document.documentElement.classList.toggle('dark');
+            });
+            
+            // Mobile menu
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            mobileMenu.addEventListener('click', (e) => {
+                 if (e.target.tagName === 'A') {
+                    mobileMenu.classList.add('hidden');
+                 }
+            });
+
+            // Admin Login
+            document.getElementById('admin-login-btn').addEventListener('click', () => openModal('login-modal'));
+            document.getElementById('admin-logout-btn').addEventListener('click', logout);
+            document.getElementById('login-cancel').addEventListener('click', () => closeModal('login-modal'));
+            document.getElementById('login-submit').addEventListener('click', login);
+            document.getElementById('password-input').addEventListener('keyup', (e) => {
+                if (e.key === 'Enter') login();
+            });
+
+            // Project Modal
+            document.getElementById('add-project-btn').addEventListener('click', () => {
+                document.getElementById('project-form').reset();
+                document.getElementById('project-id').value = '';
+                document.getElementById('project-modal-title').textContent = 'Add Project';
+                openModal('project-modal');
+            });
+            document.getElementById('project-cancel').addEventListener('click', () => closeModal('project-modal'));
+            
+            document.getElementById('project-form').addEventListener('submit', (e) => {
+                e.preventDefault();
+                const id = document.getElementById('project-id').value;
+                const newProject = {
+                    id: id ? parseInt(id) : Date.now(),
+                    title: document.getElementById('project-title').value,
+                    image: document.getElementById('project-image').value || 'https://placehold.co/600x400',
+                    description: document.getElementById('project-description').value,
+                    tech: document.getElementById('project-tech').value.split(',').map(t => t.trim()),
+                    link: document.getElementById('project-link').value,
+                    repo: document.getElementById('project-repo').value,
+                };
+                
+                if (id) {
+                    state.projects = state.projects.map(p => p.id === newProject.id ? newProject : p);
+                } else {
+                    state.projects.push(newProject);
+                }
+                saveData();
+                renderProjects();
+                closeModal('project-modal');
+            });
+            
+            function addProjectEventListeners() {
+                document.querySelectorAll('.edit-project-btn').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const id = parseInt(e.currentTarget.dataset.id);
+                        const project = state.projects.find(p => p.id === id);
+                        document.getElementById('project-id').value = project.id;
+                        document.getElementById('project-title').value = project.title;
+                        document.getElementById('project-image').value = project.image;
+                        document.getElementById('project-description').value = project.description;
+                        document.getElementById('project-tech').value = project.tech.join(', ');
+                        document.getElementById('project-link').value = project.link;
+                        document.getElementById('project-repo').value = project.repo;
+                        document.getElementById('project-modal-title').textContent = 'Edit Project';
+                        openModal('project-modal');
+                    });
+                });
+                
+                document.querySelectorAll('.delete-project-btn').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        if (confirm('Are you sure you want to delete this project?')) {
+                            const id = parseInt(e.currentTarget.dataset.id);
+                            state.projects = state.projects.filter(p => p.id !== id);
+                            saveData();
+                            renderProjects();
+                        }
+                    });
+                });
+            }
+
+            // About Modal
+            document.getElementById('edit-about-btn').addEventListener('click', () => {
+                document.getElementById('about-name').value = state.about.name;
+                document.getElementById('about-title').value = state.about.title;
+                document.getElementById('about-bio').value = state.about.bio;
+                document.getElementById('about-full').value = state.about.fullText;
+                openModal('about-modal');
+            });
+            document.getElementById('about-cancel').addEventListener('click', () => closeModal('about-modal'));
+
+            document.getElementById('about-form').addEventListener('submit', e => {
+                e.preventDefault();
+                state.about.name = document.getElementById('about-name').value;
+                state.about.title = document.getElementById('about-title').value;
+                state.about.bio = document.getElementById('about-bio').value;
+                state.about.fullText = document.getElementById('about-full').value;
+                saveData();
+                renderAbout();
+                closeModal('about-modal');
+            });
+
+            // Resume Upload
+            const resumeUpload = document.getElementById('resume-upload');
+            const downloadBtn = document.getElementById('download-resume-btn');
+            const uploadStatus = document.getElementById('upload-status');
+
+            resumeUpload.addEventListener('change', (event) => {
+                const file = event.target.files[0];
+                if (file && file.type === 'application/pdf') {
+                    // In a real app, you would upload this file to a server.
+                    // Here, we simulate it using a Blob URL.
+                    // Note: This URL is temporary and only works in the current browser session.
+                    if (state.resumeUrl) {
+                        URL.revokeObjectURL(state.resumeUrl); // Clean up old URL
+                    }
+                    state.resumeUrl = URL.createObjectURL(file);
+                    downloadBtn.href = state.resumeUrl;
+                    downloadBtn.download = file.name;
+                    uploadStatus.textContent = `File ready: ${file.name}. Click 'Download Resume' to test.`;
+                    uploadStatus.classList.remove('text-red-500');
+                    uploadStatus.classList.add('text-green-500');
+                } else {
+                    uploadStatus.textContent = 'Please select a valid PDF file.';
+                    uploadStatus.classList.remove('text-green-500');
+                    uploadStatus.classList.add('text-red-500');
+                }
+            });
+
+
+            // --- INITIALIZATION ---
+            loadData();
+            renderAbout();
+            renderProjects();
+            updateAdminView();
+        });
+    </script>
+</body>
+</html>
